@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HTML5 개인 포트폴리오 홈페이지</title>
+	<script src="http://echarts.baidu.com/dist/echarts.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="mportpolio.css" />
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit-icons.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+		integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<h1 style="font-family: 'Quicksand', sans-serif; color: #f9f1ef;">Portfolio</h1>
+	</header>
+	<nav>
+		<a class="uk-button uk-button-default" href="mcareer.html">경력</a>
+		<a class="uk-button uk-button-default" href="mstudy.html">학술</a>
+		<a class="uk-button uk-button-default" href="minfo.html">인적</a>
+		<a class="uk-button uk-button-default" href="mintro.html">소개</a>
+	</nav>
+	<div class="content">
+		<section class="section1">
+			<h3 style="margin: 10px; font-size: 1.75rem; color: #8a81b9;  opacity: 1;"><i class="fa fa-file-code-o" aria-hidden="true"></i> 학습도</h3>
+			<div id="chart-container" style="margin-bottom: 30px;"></div>
+			<script src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+
+			<script>
+				var dom = document.getElementById('chart-container');
+				var myChart = echarts.init(dom, null, {
+					renderer: 'canvas',
+					useDirtyRect: false
+				});
+				var app = {};
+
+				var option;
+
+				option = {
+					dataset: {
+						source: [
+							['score', 'amount', 'product'],
+							[20, 25, 'Python'],
+							[20, 30, 'PHP'],
+							[50, 40, 'SQL'],
+							[50, 40, 'JavaScript'],
+							[100, 60, 'CSS'],
+							[100, 65, 'HTML']
+						]
+					},
+					grid: { containLabel: true },
+					xAxis: { name: 'amount' 
+				,min: 0,
+            max: 100
+            //위의 min, max를 설정한 모습을 확인할 수 있습니다.
+				},
+					yAxis: { type: 'category' },
+					visualMap: {
+						orient: 'horizontal',
+						left: 'center',
+						min: 0,
+						max: 120,
+						text: ['High Score', 'Low Score'],
+						// Map the score column to color
+						dimension: 0,
+						inRange: {
+							color: ['#65B581', '#FFCE34', '#FD665F']
+						}
+					},
+					series: [
+						{
+							type: 'bar',
+							encode: {
+								// Map the "amount" column to X axis.
+								x: 'amount',
+								// Map the "product" column to Y axis
+								y: 'product'
+							}
+						}
+					]
+				};
+
+				if (option && typeof option === 'object') {
+					myChart.setOption(option);
+				}
+
+				window.addEventListener('resize', myChart.resize);
+
+
+			</script>
+
+
+			<h3 style="margin: 10px; font-size: 1.75rem; color: #8a81b9;  opacity: 1;"><i class="fa fa-keyboard-o"
+					aria-hidden="true"></i> 인턴쉽</h3>
+			<ul style="margin-bottom: 50px;">
+				<li>2022.6~8 하계 인턴쉽 참여</li>
+			</ul>
+		</section>
+		<aside>
+			<h3 style="margin: 10px; font-size: 1.75rem; color: #8a81b9;  opacity: 1;"><i class="fa fa-link"
+					aria-hidden="true"></i> 참조링크</h3>
+			<a href="http://www.naver.com">
+				<img class="portal" src="naver.jpg" alt="네이버이동" />
+			</a>
+			<a href="http://www.google.com">
+				<img class="portal" src="google.jpg" alt="구글이동" />
+			</a>
+			<a href="http://www.daum.net">
+				<img class="portal" src="daum.jpg" alt="다음이동" />
+			</a>
+		</aside>
+	</div>
+	<footer>
+		<h2 style="font-family: 'Quicksand', sans-serif; font-size: 20px; color: #f9f1ef;">Copyright &copy; 2022 Sugiura
+			Aina   By UIkit</h2>
+	</footer>
+</body>
+
+</html>

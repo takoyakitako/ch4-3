@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HTML5 개인 포트폴리오 홈페이지</title>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="mportpolio.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<header>
+		<h1 style="text-shadow:none;">Portfolio</h1>
+	</header>
+	<nav>
+		<div style="display: flex;">
+		<button type="button" class="btn btn-outline-secondary" onclick="location.href='mcareer.html'" style="margin-right:10px; box-shadow:none; text-shadow:none;">경력</button>
+		<button type="button" class="btn btn-outline-secondary" onclick="location.href='mstudy.html'" style="margin-right:10px; box-shadow:none; text-shadow:none;">학술</button>
+		<button type="button" class="btn btn-outline-secondary" onclick="location.href='minfo.html'" style="margin-right:10px; box-shadow:none; text-shadow:none;">인적</button>
+		<button type="button" class="btn btn-outline-secondary" onclick="location.href='mintro.html'" style="margin-right:10px; box-shadow:none; text-shadow:none;">소개</button>
+	</div>
+	</nav>
+	<div class="content">
+
+		<section class="section1">
+			<h3 style="margin-bottom: 20px;"><i class="fa fa-tag" aria-hidden="true"></i> 자기소개</h3>
+			<!-- <p>Image at the top (card-img-top):</p> -->
+			<div class="card" style="margin-bottom: 50px;">
+				<img class="card-img-top rounded-circle" src="./IMG_E253DD535D69-1.jpeg" alt="Card image" style="width:60%; padding-top: 20px;">
+				<div class="card-body">
+					<h4 class="card-title">Sugiura Aina</h4>
+					<p class="card-text">일본에서 온 아이나입니다 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat placerat
+						tellus ut euismod. Integer dignissim molestie sem ut congue. Vestibulum aliquet nibh eget augue dapibus,
+						molestie commodo eros sagittis. Donec interdum pretium rhoncus.</p>
+				</div>
+			</div>
+		</section>
+		<aside>
+			<h3><i class="fa fa-link" aria-hidden="true"></i> 참조링크</h3>
+			<a href="http://www.naver.com">
+				<img class="portal" src="naver.jpg" alt="네이버이동" />
+			</a>
+			<a href="http://www.google.com">
+				<img class="portal" src="google.jpg" alt="구글이동" />
+			</a>
+			<a href="http://www.daum.net">
+				<img class="portal" src="daum.jpg" alt="다음이동" />
+			</a>
+		</aside>
+	</div>
+	<footer>
+		<h2 style="font-size: 20px; text-shadow:none;">Copyright &copy; 2022 Sugiura Aina   By bootstrap</h2>
+	</footer>
+</body>
+
+</html>
